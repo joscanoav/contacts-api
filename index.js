@@ -26,6 +26,8 @@ mongoose
 const rutasContactos = require('./routes/contactos');
 servidor.use('/api/contactos', rutasContactos);
 
+const authRouter = require('./routes/auth');
+servidor.use('/auth', authRouter);
 
 // 8️⃣ Arrancamos el servidor en el puerto definido en .env o 3000
 const puerto = process.env.PUERTO || 3000;
